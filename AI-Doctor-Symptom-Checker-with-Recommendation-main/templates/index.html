@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}AI Doctor - Your Personal Health Assistant{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-6">Your AI-Powered Health Assistant</h1>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Get instant symptom analysis, personalized medical recommendations, and track your health journey with our advanced AI technology.
+            </p>
+            <div class="space-x-4">
+                <a href="{{ url_for('signup') }}" class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-50 transition duration-300">
+                    Get Started Free
+                </a>
+                <a href="{{ url_for('login') }}" class="bg-transparent text-white px-8 py-3 rounded-md text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition duration-300">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose AI Doctor?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Symptom Analysis</h3>
+                <p class="text-gray-600">Our AI analyzes your symptoms in real-time, providing accurate assessments and potential conditions.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Personalized Recommendations</h3>
+                <p class="text-gray-600">Receive tailored health advice and treatment suggestions based on your specific symptoms.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Health History Tracking</h3>
+                <p class="text-gray-600">Keep a comprehensive record of your symptoms, diagnoses, and health journey over time.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How It Works</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-blue-600">1</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Sign Up</h3>
+                <p class="text-gray-600">Create your free account in seconds</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-blue-600">2</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Enter Symptoms</h3>
+                <p class="text-gray-600">Describe your symptoms in detail</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-blue-600">3</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Get Analysis</h3>
+                <p class="text-gray-600">Receive instant AI-powered analysis</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-blue-600">4</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Follow Recommendations</h3>
+                <p class="text-gray-600">Get personalized health advice</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Users Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-blue-600 font-semibold">JD</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-gray-800">John Doe</h4>
+                        <p class="text-gray-600 text-sm">Regular User</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"The symptom checker is incredibly accurate and the recommendations are always helpful. It's like having a doctor in your pocket!"</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-blue-600 font-semibold">JS</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-gray-800">Jane Smith</h4>
+                        <p class="text-gray-600 text-sm">Healthcare Professional</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"As a healthcare provider, I'm impressed by the accuracy of the AI analysis. It's a great tool for preliminary health assessments."</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-blue-600 font-semibold">RJ</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-gray-800">Robert Johnson</h4>
+                        <p class="text-gray-600 text-sm">Frequent User</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"The health history tracking feature is fantastic. It helps me keep track of my symptoms and share them with my doctor."</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Take Control of Your Health?</h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join thousands of users who trust AI Doctor for their health assessments and recommendations.
+        </p>
+        <a href="{{ url_for('signup') }}" class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-50 transition duration-300">
+            Get Started Now
+        </a>
+    </div>
+</div>
+
+<!-- Disclaimer -->
+<div class="py-8 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm text-gray-600">
+            Disclaimer: AI Doctor is not a replacement for professional medical advice. Always consult with a healthcare provider for proper diagnosis and treatment.
+        </p>
+    </div>
+</div>
+{% endblock %} 

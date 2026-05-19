@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}History - AI Doctor{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-800 mb-8">Your Health History</h1>
+    
+    {% if symptoms %}
+        <div class="space-y-6">
+            {% for symptom in symptoms %}
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800">Symptom Check</h3>
+                        <p class="text-sm text-gray-500">{{ symptom.timestamp.strftime('%B %d, %Y at %I:%M %p') }}</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-700">Reported Symptoms</h4>
+                        <p class="text-gray-600">{{ symptom.symptoms }}</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-700">Diagnosis</h4>
+                        <p class="text-gray-600">{{ symptom.diagnosis }}</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-700">Recommendations</h4>
+                        <p class="text-gray-600">{{ symptom.recommendations }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <p class="text-gray-600">No symptom checks recorded yet.</p>
+            <a href="{{ url_for('dashboard') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                Check Symptoms Now
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %} 
